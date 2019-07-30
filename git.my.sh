@@ -13,7 +13,7 @@ if [ $answer = $yes ]
 then
 	read -p "Add commit desctiption: " answer
 	git commit -m $answer
-	git push
+	git push origin master
 fi
 
 #value=42

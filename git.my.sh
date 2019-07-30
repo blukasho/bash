@@ -11,7 +11,8 @@ git status
 read -p "Do you want commit and push changes? y || n " answer
 if [ $answer = $yes ]
 then
-	read -p "Add commit desctiption: " answer
+	echo -n "Add commit desctiption: "
+	readline -e answer
 	git commit -m $answer
 	git push origin master
 fi

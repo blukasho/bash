@@ -51,16 +51,16 @@ set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Documents/projects/git.my.sh
+cd ~/Documents/projects/bash
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 git.my.sh
+badd +0 test.sh
 argglobal
 silent! argdel *
-argadd git.my.sh
-edit git.my.sh
+argadd test.sh
+edit test.sh
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -175,12 +175,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 16 - ((13 * winheight(0) + 24) / 49)
+let s:l = 5 - ((4 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
-normal! 027|
+5
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

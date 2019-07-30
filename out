@@ -1,0 +1,9 @@
+total 4792
+drwxrwxr-x  3 blukasho blukasho    4096 лип 29 12:28 .
+drwxrwxr-x 11 blukasho blukasho    4096 лип 29 09:19 ..
+-rw-rw-r--  1 blukasho blukasho       0 лип 29 11:39 0
+-rw-rw-r--  1 blukasho blukasho      37 лип 29 10:14 error
+drwxrwxr-x  7 blukasho blukasho    4096 лип 29 09:21 .git
+-rwxrw-r--  1 blukasho blukasho     600 лип 29 12:28 git.my.sh
+-rw-rw-r--  1 blukasho blukasho    4854 лип 29 12:28 mysession.vim
+-rw-rw-r--  1 blukasho blukasho 4876493 лип 29 12:27 out

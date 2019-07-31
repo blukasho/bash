@@ -2,12 +2,10 @@
 
 #Script commit changes in path . and push this.
 
-yes="y"
-no="n"
 git add .
 git status
-read -p "Do you want commit and push changes? y || n " answer
-if [ $answer = $yes ] || [ $answer = "yes" ]
+read -p "Do you want commit and push changes? " answer
+if [ $answer = "y" ] || [ $answer = "yes" ]
 then
 	echo -n "Add commit desctiption: "
 	read answer

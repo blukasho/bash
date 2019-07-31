@@ -7,7 +7,7 @@ no="n"
 git add .
 git status
 read -p "Do you want commit and push changes? y || n " answer
-if [ $answer = $yes ]
+if [ $answer = $yes ] || [ $answer = "yes" ]
 then
 	echo -n "Add commit desctiption: "
 	read answer

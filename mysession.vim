@@ -56,11 +56,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 test.sh
+badd +0 git.my.sh
 argglobal
 silent! argdel *
-argadd test.sh
-edit test.sh
+argadd git.my.sh
+edit git.my.sh
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -175,12 +175,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((4 * winheight(0) + 25) / 51)
+let s:l = 10 - ((9 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 0
+10
+normal! 044|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

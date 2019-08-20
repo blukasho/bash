@@ -1,0 +1,13 @@
+#!/bin/sh
+COLOR='\033[1m'
+NC='\033[0m'
+DIR=TelegramPNGs/
+for FILENAME in "$@"
+do
+	mkdir -p $DIR
+	NEWFILENAME="${FILENAME%.*}.png"
+	OLDFILESIZE=$(identify -format "%wx%h" $FILENAME)
+	convert $FILENAME -resize 512x512\> $DIR$NEWFILENAME 
+	NEWFILESIZE=$(identify -format "%wx%h" $DIR$NEWFILENAME)
+	echo "$COLOR$FILENAME $OLDFILESIZE -> $DIR$NEWFILENAME $NEWFILESIZE$NC"
+done

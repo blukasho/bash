@@ -10,5 +10,7 @@ then
 	echo -n "Add commit desctiption: "
 	read answer
 	git commit -m "$answer"
-	git push origin master
+	echo -n "Set brach ro commit origin -> : "
+	read answer
+	git push origin $answer
 fi
